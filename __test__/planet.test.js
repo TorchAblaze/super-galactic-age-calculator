@@ -14,4 +14,9 @@ describe("Planet", () => {
     const userAge = 23;
     expect(planet.mercuryAge(userAge)).toEqual(95);
   });
+  test("should create a Venus method that that takes an age parameter and returns that age in Venus years", () => {
+    const planet = new Planet("Venus", 0.62);
+    const userAge = 23;
+    expect(planet.venusAge(userAge)).toEqual(37);
+  });
 });
