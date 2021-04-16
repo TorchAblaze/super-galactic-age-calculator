@@ -10,9 +10,8 @@ describe("LifeLeft", () => {
     };
     expect(lifeLeft).toEqual(lifeLeftObject);
   });
-  test("should return a number that indicates how many years a person has left to live", () => {
+  test("should return a number that matches the life expectancy of the object continent", () => {
     const lifeLeft = new LifeLeft("North America", "Very", "Low");
-    const age = 23;
-    expect(lifeLeft.lifeCalculator(age)).toEqual(83);
+    expect(lifeLeft.lifeExpect()).toEqual(78);
   });
 });

@@ -4,5 +4,5 @@ export default class LifeLeft {
     this.happyLevel = happyLevel;
     this.stressLevel = stressLevel;
   }
-  lifeCalculator(age) {}
+  lifeExpect() {}
 }
