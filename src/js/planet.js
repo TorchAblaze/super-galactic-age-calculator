@@ -1,3 +1,6 @@
 export default class Planet {
-  constructor() {}
+  constructor(name, earthYears) {
+    this.name = name;
+    this.earthYears = earthYears;
+  }
 }

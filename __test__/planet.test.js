@@ -1,7 +1,7 @@
 import Planet from "../src/js/planet.js";
 
 describe("Planet", () => {
-  test("will create a planet object with a planet name and Earth year equivalent property", () => {
+  test("should create a planet object with planet name and Earth year equivalent properties", () => {
     const planet = new Planet("Mercury", 0.24);
     const planetObject = {
       name: "Mercury",
