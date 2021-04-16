@@ -23,17 +23,14 @@ export default class LifeLeft {
   lifeStyles() {
     if (this.happyLevel === 3) {
       this.lifeExpect += 5;
-      return this.lifeExpect;
     } else if (this.happyLevel === 2) {
       this.lifeExpect += 2;
-      return this.lifeExpect;
     }
     if (this.stressLevel === 3) {
       this.lifeExpect -= 2;
-      return this.lifeExpect;
     } else if (this.stressLevel === 2) {
       this.lifeExpect -= 1;
-      return this.lifeExpect;
     }
+    return this.lifeExpect;
   }
 }
