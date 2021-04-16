@@ -11,7 +11,7 @@ describe("LifeLeft", () => {
     expect(lifeLeft).toEqual(lifeLeftObject);
   });
   test("should return a number that matches the life expectancy of the object continent", () => {
-    const lifeLeft = new LifeLeft("North America", "Very", "Low");
-    expect(lifeLeft.lifeExpect()).toEqual(78);
+    const lifeExpect = new LifeLeft("North America", "Very", "Low");
+    expect(lifeExpect.lifeExpect()).toEqual(78);
   });
 });
