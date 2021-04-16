@@ -30,4 +30,9 @@ describe("LifeLeft", () => {
     lifeLeft.lifeExpect();
     expect(lifeLeft.lifeStyles()).toEqual(78);
   });
+  test("should subtract 2 years from life expectancy if overall stress level is high", () => {
+    lifeLeft.stressLevel = 3;
+    lifeLeft.lifeExpect();
+    expect(lifeLeft.lifeStyles()).toEqual(81);
+  });
 });
