@@ -1,8 +1,11 @@
 import LifeLeft from "../src/js/life-left.js";
 
 describe("LifeLeft", () => {
+  let lifeLeft;
+  beforeEach(() => {
+    lifeLeft = new LifeLeft("North America", "Very", "Low");
+  });
   test("should create a life left object that has overall happiness, average stress level and continent properties", () => {
-    const lifeLeft = new LifeLeft("North America", "Very", "Low");
     const lifeLeftObject = {
       continent: "North America",
       happyLevel: "Very",
@@ -11,7 +14,6 @@ describe("LifeLeft", () => {
     expect(lifeLeft).toEqual(lifeLeftObject);
   });
   test("should return a number that matches the life expectancy of the object continent", () => {
-    const lifeExpect = new LifeLeft("North America", "Very", "Low");
-    expect(lifeExpect.lifeExpect()).toEqual(78);
+    expect(lifeLeft.lifeExpect()).toEqual(78);
   });
 });
