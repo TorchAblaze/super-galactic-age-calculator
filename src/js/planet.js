@@ -3,4 +3,5 @@ export default class Planet {
     this.name = name;
     this.earthYears = earthYears;
   }
+  mercuryAge(userAge) {}
 }
