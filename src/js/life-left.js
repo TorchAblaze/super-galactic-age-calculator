@@ -35,6 +35,9 @@ export default class LifeLeft {
     return this.lifeExpect;
   }
   lifeCalc() {
+    if (this.age > this.lifeExpect) {
+      return this.age - this.lifeExpect;
+    }
     return this.lifeExpect - this.age;
   }
 }
