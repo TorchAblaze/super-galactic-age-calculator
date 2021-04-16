@@ -16,8 +16,13 @@ describe("LifeLeft", () => {
   test("should return a number that matches the life expectancy of the object continent", () => {
     expect(lifeLeft.lifeExpect()).toEqual(78);
   });
-  test("should add 5 years to life expectancy if happy level is high", () => {
+  test("should add 5 years to life expectancy if overall happy level is high", () => {
     lifeLeft.lifeExpect();
     expect(lifeLeft.lifeStyles()).toEqual(83);
+  });
+  test("should add 2 years to life expectancy if overall happy level is equal to 2", () => {
+    lifeLeft.happyLevel = 2;
+    lifeLeft.lifeExpect();
+    expect(lifeLeft.lifeStyles()).toEqual(80);
   });
 });
