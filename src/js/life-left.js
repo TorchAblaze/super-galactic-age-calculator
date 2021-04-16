@@ -1,8 +1,9 @@
 export default class LifeLeft {
-  constructor(continent, happyLevel, stressLevel) {
+  constructor(continent, happyLevel, stressLevel, age) {
     this.continent = continent;
     this.happyLevel = happyLevel;
     this.stressLevel = stressLevel;
+    this.age = age;
   }
   lifeExpect() {
     const continents = [

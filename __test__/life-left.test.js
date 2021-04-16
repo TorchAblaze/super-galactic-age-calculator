@@ -3,13 +3,14 @@ import LifeLeft from "../src/js/life-left.js";
 describe("LifeLeft", () => {
   let lifeLeft;
   beforeEach(() => {
-    lifeLeft = new LifeLeft("North America", 3, 1);
+    lifeLeft = new LifeLeft("North America", 3, 1, 23);
   });
   test("should create a life left object that has overall happiness, average stress level and continent properties", () => {
     const lifeLeftObject = {
       continent: "North America",
       happyLevel: 3,
       stressLevel: 1,
+      age: 23,
     };
     expect(lifeLeft).toEqual(lifeLeftObject);
   });
