@@ -26,6 +26,9 @@ export default class LifeLeft {
     } else if (this.happyLevel === 2) {
       this.lifeExpect += 2;
     }
+    if (this.stressLevel === 3) {
+      this.lifeExpect -= 2;
+    }
     return this.lifeExpect;
   }
 }
