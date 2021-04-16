@@ -34,4 +34,5 @@ export default class LifeLeft {
     }
     return this.lifeExpect;
   }
+  lifeCalc() {}
 }
