@@ -48,6 +48,7 @@ describe("LifeLeft", () => {
   });
   test("should create a method that calculates how many years a user has left", () => {
     lifeLeft.lifeExpect();
+    lifeLeft.lifeStyles();
     expect(lifeLeft.lifeCalc()).toEqual(60);
   });
 });
