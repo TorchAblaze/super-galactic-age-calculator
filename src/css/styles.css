@@ -1,0 +1,9 @@
+body {
+  background-color: rgb(251 206 255 / 82%);
+}
+
+.jumbotron {
+  color: purple;
+  background-color: rgb(82, 208, 250);
+  text-align: center;
+}

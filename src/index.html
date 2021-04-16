@@ -4,7 +4,53 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TITLE</title>
+    <title>Super Galactic Age Calculator</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <h1 class="jumbotron">Super Galactic Age Calculator</h1>
+      <p>
+        Enter your information below and the Super Galactic Age Calculator will
+        calculate your age for each of the planets in the solar system (and
+        Pluto!). It will also estimate how many years you're expected to survive
+        on earth based on where you live and your lifestyle.
+      </p>
+      <p>
+        Enter your age below and select a planet to determine your age according
+        to that planet's solar years.
+      </p>
+      <form id="galactic-calc">
+        <div class="form-group">
+          <label for="user-age">What is your age?</label>
+          <input id="user-age" class="form-control" type="number" />
+        </div>
+        <p>Where do you live?</p>
+        <select class="form-control" id="continent">
+          <option>North America</option>
+          <option>South America</option>
+          <option>Africa</option>
+          <option>Aisa</option>
+          <option>Australia</option>
+          <option>Europe</option>
+        </select>
+        <br />
+        <p>
+          On a scale of 1-3, what is your overall happiness level on average?
+        </p>
+        <select class="form-control" id="continent">
+          <option>1: My life is a tragedy</option>
+          <option>2: I'm a realist</option>
+          <option>3: I'm very optimistic, I'm made of life and kittens</option>
+        </select>
+        <br />
+        <p>On a scale of 1-3, what is your overall stress level on average?</p>
+        <select class="form-control" id="continent">
+          <option>1: I go out of my way to live a stress free life</option>
+          <option>2: My overall stress is about average</option>
+          <option>3: My brain is a scribbled mess of chaos</option>
+        </select>
+        <submit type="submit" class="btn-lg btn-primary">Submit</submit>
+      </form>
+    </div>
+  </body>
 </html>
