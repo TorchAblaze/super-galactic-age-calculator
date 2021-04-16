@@ -40,4 +40,9 @@ describe("LifeLeft", () => {
     lifeLeft.lifeExpect();
     expect(lifeLeft.lifeStyles()).toEqual(82);
   });
+  test("should return life expectancy if overall stress level is low", () => {
+    lifeLeft.stressLevel = 0;
+    lifeLeft.lifeExpect();
+    expect(lifeLeft.lifeStyles()).toEqual(83);
+  });
 });
