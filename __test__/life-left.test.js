@@ -17,6 +17,7 @@ describe("LifeLeft", () => {
     expect(lifeLeft.lifeExpect()).toEqual(78);
   });
   test("should add 5 years to life expectancy if happy level is high", () => {
+    lifeLeft.lifeExpect();
     expect(lifeLeft.lifeStyles()).toEqual(83);
   });
 });

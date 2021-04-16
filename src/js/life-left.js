@@ -20,5 +20,10 @@ export default class LifeLeft {
     });
     return this.lifeExpect;
   }
-  lifeStyles() {}
+  lifeStyles() {
+    if (this.happyLevel === 3) {
+      this.lifeExpect += 5;
+    }
+    return this.lifeExpect;
+  }
 }
