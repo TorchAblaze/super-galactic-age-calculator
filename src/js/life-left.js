@@ -20,4 +20,5 @@ export default class LifeLeft {
     });
     return this.lifeExpect;
   }
+  lifeStyles() {}
 }
