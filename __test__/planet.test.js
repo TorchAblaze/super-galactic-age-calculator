@@ -9,19 +9,23 @@ describe("Planet", () => {
     };
     expect(planet).toEqual(planetObject);
   });
-  test("should create a Mercury method that takes an age parameter and returns that age in Mercury years", () => {
-    const planet = new Planet("Mercury", 0.24);
+  test("should create a planet age method that takes an age parameter and returns that age in the planet's years", () => {
+    const mercury = new Planet("Mercury", 0.24);
+    const venus = new Planet("Venus", 0.62);
+    const mars = new Planet("Mars", 1.88);
+    const jupitar = new Planet("Jupitar", 11.86);
+    const saturn = new Planet("Saturn", 0.45);
+    const uranus = new Planet("Uranus", 0.72);
+    const neptune = new Planet("Neptune", 0.67);
+    const pluto = new Planet("Pluto", 6.39);
     const userAge = 23;
-    expect(planet.mercuryAge(userAge)).toEqual(95);
-  });
-  test("should create a Venus method that that takes an age parameter and returns that age in Venus years", () => {
-    const planet = new Planet("Venus", 0.62);
-    const userAge = 23;
-    expect(planet.venusAge(userAge)).toEqual(37);
-  });
-  test("should create a Mars method that takes an age parameter and returns that age in Mars years", () => {
-    const planet = new Planet("Mars", 1.88);
-    const userAge = 23;
-    expect(planet.marsAge(userAge)).toEqual(12);
+    expect(mercury.planetAge(userAge)).toEqual(95);
+    expect(venus.planetAge(userAge)).toEqual(37);
+    expect(mars.planetAge(userAge)).toEqual(12);
+    expect(jupitar.planetAge(userAge)).toEqual(1);
+    expect(saturn.planetAge(userAge)).toEqual(51);
+    expect(uranus.planetAge(userAge)).toEqual(31);
+    expect(neptune.planetAge(userAge)).toEqual(34);
+    expect(pluto.planetAge(userAge)).toEqual(3);
   });
 });

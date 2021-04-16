@@ -3,16 +3,9 @@ export default class Planet {
     this.name = name;
     this.earthYears = earthYears;
   }
-  mercuryAge(age) {
-    const mercuryYears = parseInt(age / this.earthYears);
-    return mercuryYears;
-  }
-  venusAge(age) {
-    const venusYears = parseInt(age / this.earthYears);
-    return venusYears;
-  }
-  marsAge(age) {
-    const marsYears = parseInt(age / this.earthYears);
-    return marsYears;
+  planetAge(age) {
+    const planetYears = parseInt(age / this.earthYears);
+    this.planetYears = planetYears;
+    return this.planetYears;
   }
 }
