@@ -15,16 +15,12 @@
         Pluto!). It will also estimate how many years you're expected to survive
         on earth based on where you live and your lifestyle.
       </p>
-      <p>
-        Enter your age below and select a planet to determine your age according
-        to that planet's solar years.
-      </p>
       <form id="galactic-calc">
         <div class="form-group">
           <label for="user-age">What is your age?</label>
           <input id="user-age" class="form-control" type="number" />
         </div>
-        <p>Where do you live?</p>
+        <label for="continent">Where do you live?</label>
         <select class="form-control" id="continent">
           <option>North America</option>
           <option>South America</option>
@@ -34,23 +30,32 @@
           <option>Europe</option>
         </select>
         <br />
-        <p>
+        <label for="happiness">
           On a scale of 1-3, what is your overall happiness level on average?
-        </p>
-        <select class="form-control" id="continent">
-          <option>1: My life is a tragedy</option>
-          <option>2: I'm a realist</option>
-          <option>3: I'm very optimistic, I'm made of life and kittens</option>
+        </label>
+        <select class="form-control" id="happiness">
+          <option value="1">1: My life is a tragedy</option>
+          <option value="2">2: I'm a realist</option>
+          <option value="3">
+            3: I'm very optimistic, I'm made of life and kittens
+          </option>
         </select>
         <br />
-        <p>On a scale of 1-3, what is your overall stress level on average?</p>
-        <select class="form-control" id="continent">
-          <option>1: I go out of my way to live a stress free life</option>
-          <option>2: My overall stress is about average</option>
-          <option>3: My brain is a scribbled mess of chaos</option>
+        <label for="stress"
+          >On a scale of 1-3, what is your overall stress level on
+          average?</label
+        >
+        <select class="form-control" id="stress">
+          <option value="1">
+            1: I go out of my way to live a stress free life
+          </option>
+          <option value="2">2: My overall stress is about average</option>
+          <option value="3">3: My brain is a scribbled mess of chaos</option>
         </select>
-        <submit type="submit" class="btn-lg btn-primary">Submit</submit>
+        <br />
+        <button type="button" class="btn btn-primary">To Infinity!</button>
       </form>
     </div>
+    <div id="output"></div>
   </body>
 </html>

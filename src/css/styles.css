@@ -1,9 +1,21 @@
-body {
-  background-color: rgb(251 206 255 / 82%);
-}
-
 .jumbotron {
   color: purple;
   background-color: rgb(82, 208, 250);
   text-align: center;
+}
+
+.container {
+  background-color: rgb(251 206 255 / 82%);
+}
+
+body {
+  background-color: rgb(27, 22, 94);
+}
+
+p {
+  padding: 1%;
+}
+
+form {
+  padding: 3%;
 }
