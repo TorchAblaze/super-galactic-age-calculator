@@ -25,4 +25,9 @@ describe("LifeLeft", () => {
     lifeLeft.lifeExpect();
     expect(lifeLeft.lifeStyles()).toEqual(80);
   });
+  test("should return expected life expectancy if overall happy level is low", () => {
+    lifeLeft.happyLevel = 0;
+    lifeLeft.lifeExpect();
+    expect(lifeLeft.lifeStyles()).toEqual(78);
+  });
 });
