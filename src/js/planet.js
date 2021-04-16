@@ -3,5 +3,8 @@ export default class Planet {
     this.name = name;
     this.earthYears = earthYears;
   }
-  mercuryAge(userAge) {}
+  mercuryAge(userAge) {
+    const mercuryYears = parseInt(userAge / this.earthYears);
+    return mercuryYears;
+  }
 }
