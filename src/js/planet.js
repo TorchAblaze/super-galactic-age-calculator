@@ -7,5 +7,8 @@ export default class Planet {
     const mercuryYears = parseInt(age / this.earthYears);
     return mercuryYears;
   }
-  venusAge(age) {}
+  venusAge(age) {
+    const venusYears = parseInt(age / this.earthYears);
+    return venusYears;
+  }
 }
