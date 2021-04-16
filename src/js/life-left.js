@@ -28,6 +28,8 @@ export default class LifeLeft {
     }
     if (this.stressLevel === 3) {
       this.lifeExpect -= 2;
+    } else if (this.stressLevel === 2) {
+      this.lifeExpect -= 1;
     }
     return this.lifeExpect;
   }
