@@ -16,7 +16,7 @@ This website will take a user's age and calculate how old that user would be dep
 
 ### Installation
 
-1. Clone the repository: `$ git clone {https://github.com/TorchAblaze/super-galactic-age-calculator.git}`
+1. Clone the repository: `$ git clone https://github.com/TorchAblaze/super-galactic-age-calculator.git`
 2. Navigate to the `super-galactic-age-calculator` directory on your computer
 3. Open with your preferred text editor to view the code base
 4. To start a development server and view the project in the browser:
