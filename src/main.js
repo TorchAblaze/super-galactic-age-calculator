@@ -1,16 +1,11 @@
-import $ from "jQuery";
+import $ from "jquery";
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/styles.css";
 import Planet from "./js/planet.js";
 import LifeLeft from "./js/life-left.js";
 
-$document.ready(function () {
-  event.preventDefault();
-  const userAge = parseInt($("#user-age").val());
-  const continent = $("#continent").val();
-  const happiness = $("#happiness").val();
-  const stress = $("#stress").val();
+$(document).ready(function () {
   const planets = [
     new Planet("Mercury", 0.24),
     new Planet("Venus", 0.62),
@@ -21,11 +16,25 @@ $document.ready(function () {
     new Planet("Neptune", 0.67),
     new Planet("Pluto", 6.39),
   ];
-  const planetAge = new Planet(planetSelcted, userAge);
-  const lifeExpectancy = new LifeLeft(continent, happiness, stress, userAge);
   let newUserAges = [];
-
-  planets.forEach((element) => {
-    newUserAges.push(element.planetAge(userAge));
+  $("form#galactic-calc").submit(function (event) {
+    event.preventDefault();
+    const userAge = parseInt($("#user-age").val());
+    const continent = $("#continent").val();
+    const happiness = $("#happiness").val();
+    const stress = $("#stress").val();
+    const lifeExpectancy = new LifeLeft(continent, happiness, stress, userAge);
+    planets.forEach((element) => {
+      newUserAges.push(element.planetAge(userAge));
+    });
+    let planetAges = "";
+    planets.forEach((element, index) => {
+      planetAges += `<p>Planets and Ages:</p> <ul> <li>Planet: ${element.name} Age: ${newUserAges[index]}</li></ul>`;
+    });
+    lifeExpectancy.lifeExpect();
+    lifeExpectancy.lifeStyles();
+    $("#output").html(planetAges);
+    $("#output").text(lifeExpectancy.lifeCalc());
+    $("#output").show();
   });
 });
