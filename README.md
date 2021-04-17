@@ -26,11 +26,9 @@ This website will take a user's age and calculate how old that user would be dep
    - Run the command `npm run start` to start a development server
 5. To run tests, navigate to `super-galactic-age-calculator` in your terminal and run the command `npm run test`
 
-#### To see my live website go to https://TorchAblaze.github.io/super-galactic-age-calculator!
-
 ## Known Bugs
 
-- Website Not Working
+_No known bugs_
 
 ## Support and contact details
 
