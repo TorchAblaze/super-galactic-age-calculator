@@ -36,8 +36,10 @@ export default class LifeLeft {
   }
   lifeCalc() {
     if (this.age > this.lifeExpect) {
-      return this.age - this.lifeExpect;
+      return `You have surpassed your life expectancy by ${
+        this.age - this.lifeExpect
+      } years!`;
     }
-    return this.lifeExpect - this.age;
+    return `You have ${this.lifeExpect - this.age} years left!`;
   }
 }
