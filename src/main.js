@@ -21,20 +21,31 @@ $(document).ready(function () {
     event.preventDefault();
     const userAge = parseInt($("#user-age").val());
     const continent = $("#continent").val();
-    const happiness = $("#happiness").val();
-    const stress = $("#stress").val();
-    const lifeExpectancy = new LifeLeft(continent, happiness, stress, userAge);
-    planets.forEach((element) => {
-      newUserAges.push(element.planetAge(userAge));
-    });
-    let planetAges = "";
-    planets.forEach((element, index) => {
-      planetAges += `<p>Planets and Ages:</p> <ul> <li>Planet: ${element.name} Age: ${newUserAges[index]}</li></ul>`;
-    });
-    lifeExpectancy.lifeExpect();
-    lifeExpectancy.lifeStyles();
-    $("#output").html(planetAges);
-    $("#output").text(lifeExpectancy.lifeCalc());
+    const happiness = parseInt($("#happiness").val());
+    const stress = parseInt($("#stress").val());
+    console.log(continent);
+    if (userAge < 0 || isNaN(userAge)) {
+      $("#output").text("Please enter an age in number format");
+    } else {
+      const lifeExpectancy = new LifeLeft(
+        continent,
+        happiness,
+        stress,
+        userAge
+      );
+      lifeExpectancy.lifeExpect();
+      lifeExpectancy.lifeStyles();
+      console.log(lifeExpectancy);
+      planets.forEach((element) => {
+        newUserAges.push(element.planetAge(userAge));
+      });
+      let planetAges = "<p>Planets and Ages</p>";
+      planets.forEach((element, index) => {
+        planetAges += `<ul> <li>${element.name} Age: ${newUserAges[index]}</li></ul>`;
+      });
+      $("#output").html(planetAges);
+      $("#output").append(lifeExpectancy.lifeCalc());
+    }
     $("#output").show();
   });
 });

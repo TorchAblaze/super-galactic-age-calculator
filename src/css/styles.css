@@ -1,25 +1,21 @@
 .jumbotron {
   color: purple;
-  background-color: rgb(82, 208, 250);
+  background-color: rgb(29, 30, 31);
   text-align: center;
-}
-
-.container {
-  background-color: rgb(251 206 255 / 82%);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 #output {
   display: none;
+  padding: 3%;
+  background-color: rgb(251 206 255 / 82%);
 }
 
 body {
   background-color: rgb(27, 22, 94);
 }
 
-p {
-  padding: 1%;
-}
-
 form {
   padding: 3%;
+  background-color: rgb(251 206 255 / 82%);
 }
