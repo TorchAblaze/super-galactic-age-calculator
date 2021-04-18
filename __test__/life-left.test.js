@@ -57,4 +57,11 @@ describe("LifeLeft", () => {
     lifeLeft.lifeStyles();
     expect(lifeLeft.surpassedExpect()).toEqual(true);
   });
+  test("should return years surpassed the expectancy if lifeExpect() returns true", () => {
+    lifeLeft.age = 93;
+    lifeLeft.lifeExpect();
+    lifeLeft.lifeStyles();
+    const yearsSurpassed = lifeLeft.surpassedExpect();
+    expect(lifeLeft.lifeCalc(yearsSurpassed)).toEqual(10);
+  });
 });

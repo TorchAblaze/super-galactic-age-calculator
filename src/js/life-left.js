@@ -40,4 +40,5 @@ export default class LifeLeft {
     }
     return false;
   }
+  lifeCalc(booleanValue) {}
 }
