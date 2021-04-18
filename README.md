@@ -6,7 +6,7 @@
 
 ## Description
 
-This website will take a user's age and calculate how old that user would be depending on the planet's solar years. It will also ask for a user's location and lifestyle to estimate the user's life expectancy and guess how many years they have left on Earth.
+This website will take a user's age and calculate how old that user would be depending on the planet's solar years. It will also ask for a user's location and lifestyle to estimate the user's life expectancy and guess how many years they have left on each planet.
 
 ### Software Requirements
 
