@@ -64,4 +64,10 @@ describe("LifeLeft", () => {
     const yearsSurpassed = lifeLeft.surpassedExpect();
     expect(lifeLeft.lifeCalc(yearsSurpassed)).toEqual(10);
   });
+  test("should return years left if lifeExpect() returns false", () => {
+    lifeLeft.lifeExpect();
+    lifeLeft.lifeStyles();
+    const yearsLeft = lifeLeft.surpassedExpect();
+    expect(lifeLeft.lifeCalc(yearsLeft)).toEqual(60);
+  });
 });
