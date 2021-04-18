@@ -23,28 +23,27 @@ $(document).ready(function () {
     const continent = $("#continent").val();
     const happiness = parseInt($("#happiness").val());
     const stress = parseInt($("#stress").val());
-    console.log(continent);
-    if (userAge < 0 || isNaN(userAge)) {
-      $("#output").text("Please enter an age in number format");
-    } else {
-      const lifeExpectancy = new LifeLeft(
-        continent,
-        happiness,
-        stress,
-        userAge
-      );
-      lifeExpectancy.lifeExpect();
-      lifeExpectancy.lifeStyles();
-      console.log(lifeExpectancy);
-      planets.forEach((element) => {
+    const lifeExpectancy = new LifeLeft(continent, happiness, stress, userAge);
+    lifeExpectancy.lifeExpect();
+    lifeExpectancy.lifeStyles();
+    let error;
+
+    planets.forEach((element) => {
+      if (isNaN(element.planetAge(userAge))) {
+        error = element.planetAge();
+      } else {
         newUserAges.push(element.planetAge(userAge));
-      });
+      }
+    });
+    if (newUserAges.length > 1) {
       let planetAges = "<p>Planets and Ages</p>";
       planets.forEach((element, index) => {
         planetAges += `<ul> <li>${element.name} Age: ${newUserAges[index]}</li></ul>`;
       });
       $("#output").html(planetAges);
       $("#output").append(lifeExpectancy.lifeCalc());
+    } else {
+      $("#output").text(error);
     }
     $("#output").show();
   });
