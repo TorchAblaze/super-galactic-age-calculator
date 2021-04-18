@@ -41,15 +41,15 @@ $(document).ready(function () {
       let planetAges = "<p>Planets and Ages</p>";
       planets.forEach((element, index) => {
         if (yearsSurpassed) {
-          planetAges += `<ul> <li>You are ${newUserAges[index]} years old on ${
-            element.name
-          } and have surpassed the life expectancy by ${element.planetYear(
+          planetAges += `<ul> <li>You are ${
+            newUserAges[index]
+          } year(s) old and have surpassed the life expectancy by ${element.planetYear(
             yearsLeft
           )} year(s) on ${element.name}</li></ul>`;
         } else {
-          planetAges += `<ul> <li>You are ${newUserAges[index]} years old on ${
-            element.name
-          } and have approximately ${element.planetYear(
+          planetAges += `<ul> <li>You are ${
+            newUserAges[index]
+          } year(s) old and have approximately ${element.planetYear(
             yearsLeft
           )} year(s) left on ${element.name}</li></ul>`;
         }
@@ -57,11 +57,11 @@ $(document).ready(function () {
       $("#output").html(planetAges);
       if (yearsSurpassed) {
         $("#output").append(
-          `You have surpassed the life expectancy by ${yearsLeft} years on Earth`
+          `You have surpassed the life expectancy by ${yearsLeft} year(s) on Earth`
         );
       } else {
         $("#output").append(
-          `You have surpassed the life expectancy by ${yearsLeft} years on Earth`
+          `You have approximately ${yearsLeft} year(s) on Earth`
         );
       }
     } else {
