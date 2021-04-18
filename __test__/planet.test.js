@@ -28,4 +28,9 @@ describe("Planet", () => {
     expect(neptune.planetAge(userAge)).toEqual(34);
     expect(pluto.planetAge(userAge)).toEqual(3);
   });
+  test("If userAge is less than 0 return false", () => {
+    const mercury = new Planet("Mercury", 0.24);
+    const userAge = -12;
+    expect(mercury.planetAge(userAge)).toEqual(false);
+  });
 });
