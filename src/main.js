@@ -61,7 +61,7 @@ $(document).ready(function () {
         );
       } else {
         $("#output").append(
-          `You have approximately ${yearsLeft} year(s) on Earth`
+          `You have approximately ${yearsLeft} year(s) left on Earth`
         );
       }
     } else {
