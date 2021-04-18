@@ -17,6 +17,7 @@ $(document).ready(function () {
     new Planet("Pluto", 6.39),
   ];
   let newUserAges = [];
+  let error;
   $("form#galactic-calc").submit(function (event) {
     event.preventDefault();
     const userAge = parseInt($("#user-age").val());
@@ -26,10 +27,10 @@ $(document).ready(function () {
     const lifeExpectancy = new LifeLeft(continent, happiness, stress, userAge);
     lifeExpectancy.lifeExpect();
     lifeExpectancy.lifeStyles();
-    let error;
 
     planets.forEach((element) => {
       if (isNaN(element.planetYear(userAge))) {
+        newUserAges = [];
         error = element.planetYear();
       } else {
         newUserAges.push(element.planetYear(userAge));
