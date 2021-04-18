@@ -3,7 +3,7 @@ export default class Planet {
     this.name = name;
     this.earthYears = earthYears;
   }
-  planetYears(years) {
+  planetYear(years) {
     if (years < 0 || isNaN(years)) {
       return "Please enter a valid age in number format";
     }
