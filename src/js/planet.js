@@ -4,7 +4,7 @@ export default class Planet {
     this.earthYears = earthYears;
   }
   planetAge(age) {
-    if (age < 0 || isNaN(age)) {
+    if (age < 0) {
       return false;
     }
     const planetYears = parseInt(age / this.earthYears);
