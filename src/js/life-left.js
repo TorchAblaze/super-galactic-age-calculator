@@ -40,5 +40,9 @@ export default class LifeLeft {
     }
     return false;
   }
-  lifeCalc(booleanValue) {}
+  lifeCalc(booleanValue) {
+    if (booleanValue) {
+      return this.age - this.lifeExpect;
+    }
+  }
 }
