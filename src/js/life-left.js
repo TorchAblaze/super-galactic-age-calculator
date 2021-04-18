@@ -40,6 +40,6 @@ export default class LifeLeft {
         this.age - this.lifeExpect
       } years!`;
     }
-    return `You have ${this.lifeExpect - this.age} years left!`;
+    return `You have ${this.lifeExpect - this.age} years left on Earth!`;
   }
 }

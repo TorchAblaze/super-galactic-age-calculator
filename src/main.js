@@ -29,10 +29,10 @@ $(document).ready(function () {
     let error;
 
     planets.forEach((element) => {
-      if (isNaN(element.planetAge(userAge))) {
-        error = element.planetAge();
+      if (isNaN(element.planetYears(userAge))) {
+        error = element.planetYears();
       } else {
-        newUserAges.push(element.planetAge(userAge));
+        newUserAges.push(element.planetYears(userAge));
       }
     });
     if (newUserAges.length > 1) {

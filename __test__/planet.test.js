@@ -19,26 +19,26 @@ describe("Planet", () => {
     const neptune = new Planet("Neptune", 0.67);
     const pluto = new Planet("Pluto", 6.39);
     const userAge = 23;
-    expect(mercury.planetAge(userAge)).toEqual(95);
-    expect(venus.planetAge(userAge)).toEqual(37);
-    expect(mars.planetAge(userAge)).toEqual(12);
-    expect(jupitar.planetAge(userAge)).toEqual(1);
-    expect(saturn.planetAge(userAge)).toEqual(51);
-    expect(uranus.planetAge(userAge)).toEqual(31);
-    expect(neptune.planetAge(userAge)).toEqual(34);
-    expect(pluto.planetAge(userAge)).toEqual(3);
+    expect(mercury.planetYears(userAge)).toEqual(95);
+    expect(venus.planetYears(userAge)).toEqual(37);
+    expect(mars.planetYears(userAge)).toEqual(12);
+    expect(jupitar.planetYears(userAge)).toEqual(1);
+    expect(saturn.planetYears(userAge)).toEqual(51);
+    expect(uranus.planetYears(userAge)).toEqual(31);
+    expect(neptune.planetYears(userAge)).toEqual(34);
+    expect(pluto.planetYears(userAge)).toEqual(3);
   });
   test("If userAge is less than 0, return false", () => {
     const mercury = new Planet("Mercury", 0.24);
     const userAge = -12;
-    expect(mercury.planetAge(userAge)).toEqual(
+    expect(mercury.planetYears(userAge)).toEqual(
       "Please enter a valid age in number format"
     );
   });
   test("If userAge is equal to NaN, return false", () => {
     const mercury = new Planet("Mercury", 0.24);
     const userAge = "Hello";
-    expect(mercury.planetAge(userAge)).toEqual(
+    expect(mercury.planetYears(userAge)).toEqual(
       "Please enter a valid age in number format"
     );
   });
