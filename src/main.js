@@ -16,8 +16,6 @@ $(document).ready(function () {
     new Planet("Neptune", 0.67),
     new Planet("Pluto", 6.39),
   ];
-  let newUserAges = [];
-  let error;
   $("form#galactic-calc").submit(function (event) {
     event.preventDefault();
     const userAge = parseInt($("#user-age").val());
@@ -28,45 +26,40 @@ $(document).ready(function () {
     lifeExpectancy.lifeExpect();
     lifeExpectancy.lifeStyles();
 
-    planets.forEach((element) => {
-      if (isNaN(element.planetYear(userAge))) {
-        newUserAges = [];
-        error = element.planetYear();
-      } else {
-        newUserAges.push(element.planetYear(userAge));
-      }
-    });
+    if (isNaN(userAge) || userAge < 0) {
+      const error = "Please enter a valid age in number format";
+      $("#output").text(error);
+      $("#output").show();
+      return;
+    }
+
     const yearsSurpassed = lifeExpectancy.surpassedExpect();
     const yearsLeft = lifeExpectancy.lifeCalc(yearsSurpassed);
-    if (newUserAges.length > 1) {
-      let planetAges = "<p>Planets and Ages</p>";
-      planets.forEach((element, index) => {
-        if (yearsSurpassed) {
-          planetAges += `<ul> <li>You are ${
-            newUserAges[index]
-          } year(s) old and have surpassed the life expectancy by ${element.planetYear(
-            yearsLeft
-          )} year(s) on ${element.name}</li></ul>`;
-        } else {
-          planetAges += `<ul> <li>You are ${
-            newUserAges[index]
-          } year(s) old and have approximately ${element.planetYear(
-            yearsLeft
-          )} year(s) left on ${element.name}</li></ul>`;
-        }
-      });
-      $("#output").html(planetAges);
+    let planetAges = "<p>Planets and Ages</p>";
+    planets.forEach((element) => {
       if (yearsSurpassed) {
-        $("#output").append(
-          `You have surpassed the life expectancy by ${yearsLeft} year(s) on Earth`
-        );
+        planetAges += `<ul> <li>You are ${element.planetYear(
+          userAge
+        )} year(s) old and have surpassed the life expectancy by ${element.planetYear(
+          yearsLeft
+        )} year(s) on ${element.name}</li></ul>`;
       } else {
-        $("#output").append(
-          `You have approximately ${yearsLeft} year(s) left on Earth`
-        );
+        planetAges += `<ul> <li>You are ${element.planetYear(
+          userAge
+        )} year(s) old and have approximately ${element.planetYear(
+          yearsLeft
+        )} year(s) left on ${element.name}</li></ul>`;
       }
+    });
+    $("#output").html(planetAges);
+    if (yearsSurpassed) {
+      $("#output").append(
+        `You have surpassed the life expectancy by ${yearsLeft} year(s) on Earth`
+      );
     } else {
-      $("#output").text(error);
+      $("#output").append(
+        `You have approximately ${yearsLeft} year(s) left on Earth`
+      );
     }
     $("#output").show();
   });
