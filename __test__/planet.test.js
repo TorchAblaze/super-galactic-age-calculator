@@ -31,15 +31,11 @@ describe("Planet", () => {
   test("If userAge is less than 0, return false", () => {
     const mercury = new Planet("Mercury", 0.24);
     const userAge = -12;
-    expect(mercury.planetYear(userAge)).toEqual(
-      "Please enter a valid age in number format"
-    );
+    expect(mercury.planetYear(userAge)).toEqual(undefined);
   });
   test("If userAge is equal to NaN, return false", () => {
     const mercury = new Planet("Mercury", 0.24);
     const userAge = "Hello";
-    expect(mercury.planetYear(userAge)).toEqual(
-      "Please enter a valid age in number format"
-    );
+    expect(mercury.planetYear(userAge)).toEqual(undefined);
   });
 });
